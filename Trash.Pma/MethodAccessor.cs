@@ -101,7 +101,7 @@ namespace Trash.Pma
 
                     throw new MethodDoesNotExistException(name);
                 }
-                return info.Invoke(Instance, args);
+                return info.Invoke(Instance, BindingFlags.Default, null, args, null);
             });
         }
 
